@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
+  // TODO: Update the title and description and other metadata
   title: {
     default: "chronark.com",
     template: "%s | chronark.com",
@@ -12,8 +13,7 @@ export const metadata: Metadata = {
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
     title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+    description: "Co-founder of unkey.dev and founder of planetfall.io",
     url: "https://chronark.com",
     siteName: "chronark.com",
     images: [
@@ -66,8 +66,9 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
       </body>
